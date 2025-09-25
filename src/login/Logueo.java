@@ -48,10 +48,13 @@ public class Logueo extends javax.swing.JFrame {
         jresultado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtexto.setColumns(20);
         jtexto.setRows(5);
         jScrollPane1.setViewportView(jtexto);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 262, 51));
 
         j8.setText("8");
         j8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -59,6 +62,7 @@ public class Logueo extends javax.swing.JFrame {
                 j8MouseClicked(evt);
             }
         });
+        getContentPane().add(j8, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 64, 46, 47));
 
         j9.setText("9");
         j9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -66,6 +70,7 @@ public class Logueo extends javax.swing.JFrame {
                 j9MouseClicked(evt);
             }
         });
+        getContentPane().add(j9, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 64, 46, 47));
 
         j7.setText("7");
         j7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,6 +78,7 @@ public class Logueo extends javax.swing.JFrame {
                 j7MouseClicked(evt);
             }
         });
+        getContentPane().add(j7, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 64, 46, 47));
 
         j5.setText("5");
         j5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,6 +86,7 @@ public class Logueo extends javax.swing.JFrame {
                 j5MouseClicked(evt);
             }
         });
+        getContentPane().add(j5, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 117, 46, 47));
 
         j6.setText("6");
         j6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,6 +94,7 @@ public class Logueo extends javax.swing.JFrame {
                 j6MouseClicked(evt);
             }
         });
+        getContentPane().add(j6, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 117, 46, 47));
 
         j3.setText("3");
         j3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,6 +107,7 @@ public class Logueo extends javax.swing.JFrame {
                 j3ActionPerformed(evt);
             }
         });
+        getContentPane().add(j3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 170, 46, 47));
 
         j4.setText("4");
         j4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -106,6 +115,7 @@ public class Logueo extends javax.swing.JFrame {
                 j4MouseClicked(evt);
             }
         });
+        getContentPane().add(j4, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 117, 46, 47));
 
         j2.setText("2");
         j2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -113,6 +123,7 @@ public class Logueo extends javax.swing.JFrame {
                 j2MouseClicked(evt);
             }
         });
+        getContentPane().add(j2, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 170, 46, 47));
 
         j0.setText("0");
         j0.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,6 +131,7 @@ public class Logueo extends javax.swing.JFrame {
                 j0MouseClicked(evt);
             }
         });
+        getContentPane().add(j0, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 223, 46, 47));
 
         j1.setText("1");
         j1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -127,95 +139,55 @@ public class Logueo extends javax.swing.JFrame {
                 j1MouseClicked(evt);
             }
         });
+        getContentPane().add(j1, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 170, 46, 47));
 
         jsuma.setText("+");
+        jsuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jsumaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jsuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 223, 46, 47));
 
         jresta.setText("-");
+        jresta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrestaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jresta, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 223, 46, 47));
 
         jreiniciar.setText("C");
+        jreiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jreiniciarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jreiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 64, 46, 47));
 
         jdivision.setText("/");
+        jdivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdivisionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jdivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 117, 46, 47));
 
         jmultiplicacion.setText("*");
+        jmultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmultiplicacionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jmultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 170, 46, 47));
 
         jresultado.setText("=");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(j3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jsuma, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(j0, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jresta, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(j5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(j2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(j4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jdivision, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(j1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jmultiplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(j8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(j7, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jreiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(j8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j7, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jreiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(j5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jdivision, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(j2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(j1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jmultiplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(j0, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jsuma, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jresta, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jresultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jresultadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 223, 46, 47));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -272,6 +244,34 @@ public class Logueo extends javax.swing.JFrame {
         this.jtexto.setText(this.jtexto.getText() + 0);
     }//GEN-LAST:event_j0MouseClicked
 
+    private void jreiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jreiniciarActionPerformed
+        this.jtexto.setText("");
+    }//GEN-LAST:event_jreiniciarActionPerformed
+
+    private void jdivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdivisionActionPerformed
+       this.jtexto.setText(this.jtexto.getText() +" / ");
+    }//GEN-LAST:event_jdivisionActionPerformed
+
+    private void jmultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmultiplicacionActionPerformed
+       this.jtexto.setText(this.jtexto.getText() +" * ");
+    }//GEN-LAST:event_jmultiplicacionActionPerformed
+
+    private void jresultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jresultadoActionPerformed
+        int n;
+        
+        n = Integer.parseInt(this.jtexto.getText());
+        
+
+    }//GEN-LAST:event_jresultadoActionPerformed
+
+    private void jrestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrestaActionPerformed
+        this.jtexto.setText(this.jtexto.getText() +" - ");
+    }//GEN-LAST:event_jrestaActionPerformed
+
+    private void jsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsumaActionPerformed
+        this.jtexto.setText(this.jtexto.getText() +" + ");
+    }//GEN-LAST:event_jsumaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -296,6 +296,7 @@ public class Logueo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Logueo().setVisible(true));
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton j0;
