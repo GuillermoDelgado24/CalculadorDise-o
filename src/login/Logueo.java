@@ -251,15 +251,16 @@ public class Logueo extends javax.swing.JFrame {
     }//GEN-LAST:event_jreiniciarActionPerformed
 
     private void jdivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdivisionActionPerformed
-       this.jtexto.setText(this.jtexto.getText() +"/");
+        this.jtexto.setText(this.jtexto.getText() + "/");
     }//GEN-LAST:event_jdivisionActionPerformed
 
     private void jmultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmultiplicacionActionPerformed
-       this.jtexto.setText(this.jtexto.getText() +"*");
+        this.jtexto.setText(this.jtexto.getText() + "*");
     }//GEN-LAST:event_jmultiplicacionActionPerformed
 
     private void jresultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jresultadoActionPerformed
-        String n [];
+        String a = "";
+        String n[];
         ArrayList<String> al = new ArrayList<String>();
         n = this.jtexto.getText().split("");
         for (int i = 0; i < n.length; i++) {
@@ -267,23 +268,31 @@ public class Logueo extends javax.swing.JFrame {
         }
         this.jtexto.setText("");
         for (String string : al) {
+
             if (string.equals("+")) {
-                sumaCacluladora(al);
-            }else if(string.equals("*")){
-               //multiplicacionCacluladora(al);
+                a = sumaCalculadora(al);
+            }
+            if (string.equals("*")) {
+                a = multiplicacionCacluladora(al);
+            }
+            if (string.equals("/")) {
+                a = divisionCacluladora(al);
+            }
+            if (string.equals("-")) {
+                a = restaCacluladora(al);
             }
         }
-        
-        
+        this.jtexto.setText(a);
+
 
     }//GEN-LAST:event_jresultadoActionPerformed
 
     private void jrestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrestaActionPerformed
-        this.jtexto.setText(this.jtexto.getText() +"-");
+        this.jtexto.setText(this.jtexto.getText() + "-");
     }//GEN-LAST:event_jrestaActionPerformed
 
     private void jsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsumaActionPerformed
-        this.jtexto.setText(this.jtexto.getText() +"+");
+        this.jtexto.setText(this.jtexto.getText() + "+");
     }//GEN-LAST:event_jsumaActionPerformed
 
     /**
@@ -310,7 +319,7 @@ public class Logueo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Logueo().setVisible(true));
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton j0;
@@ -333,9 +342,91 @@ public class Logueo extends javax.swing.JFrame {
     private javax.swing.JTextArea jtexto;
     // End of variables declaration//GEN-END:variables
 
-    private void sumaCacluladora(ArrayList<String> al) {
-        int n;
-        
-        
+    private String sumaCalculadora(ArrayList<String> al) {
+        String n1 = "";
+        String n2 = "";
+        int a = 0;
+        boolean operando = false;
+        for (String string : al) {
+            if (string.equals("+")) {
+                operando = true;
+            }
+            if (operando == false) {
+                n1 += string;
+            } else {
+                n2 += string;
+            }
+        }
+        a = Integer.parseInt(n1) + Integer.parseInt(n2);
+        return Integer.toString(a);
+    }
+
+    private String restaCacluladora(ArrayList<String> al) {
+        String n1 = "";
+        String n2 = "";
+        int a = 0;
+        boolean operando = false;
+        for (String string : al) {
+            if (string.equals("-")) {
+                operando = true;
+            } else {
+                if (operando == false) {
+                    n1 += string;
+                } else {
+                    n2 += string;
+                }
+            }
+
+        }
+        int num1 = Integer.parseInt(n1);
+        int num2 = Integer.parseInt(n2);
+        a = num1 - num2;
+        return Integer.toString(a);
+    }
+
+    private String divisionCacluladora(ArrayList<String> al) {
+        String n1 = "";
+        String n2 = "";
+        double a = 0;
+        boolean operando = false;
+        for (String string : al) {
+            if (string.equals("/")) {
+                operando = true;
+            }else{
+                
+            
+            if (operando == false) {
+                n1 += string;
+            } else {
+                n2 += string;
+            }
+            }
+
+        }
+        a = Double.parseDouble(n1) / Double.parseDouble(n2);
+        return Double.toString(a);
+    }
+
+    private String multiplicacionCacluladora(ArrayList<String> al) {
+        String n1 = "";
+        String n2 = "";
+        int a = 0;
+        boolean operando = false;
+        for (String string : al) {
+            if (string.equals("*")) {
+                operando = true;
+            } else {
+                if (operando == false) {
+                    n1 += string;
+                } else {
+                    n2 += string;
+                }
+            }
+
+        }
+        int num1 = Integer.parseInt(n1);
+        int num2 = Integer.parseInt(n2);
+        a = num1 * num2;
+        return Integer.toString(a);
     }
 }
