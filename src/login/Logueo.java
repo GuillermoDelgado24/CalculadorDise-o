@@ -4,6 +4,8 @@
  */
 package login;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author tarde
@@ -249,27 +251,39 @@ public class Logueo extends javax.swing.JFrame {
     }//GEN-LAST:event_jreiniciarActionPerformed
 
     private void jdivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdivisionActionPerformed
-       this.jtexto.setText(this.jtexto.getText() +" / ");
+       this.jtexto.setText(this.jtexto.getText() +"/");
     }//GEN-LAST:event_jdivisionActionPerformed
 
     private void jmultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmultiplicacionActionPerformed
-       this.jtexto.setText(this.jtexto.getText() +" * ");
+       this.jtexto.setText(this.jtexto.getText() +"*");
     }//GEN-LAST:event_jmultiplicacionActionPerformed
 
     private void jresultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jresultadoActionPerformed
-        int n;
+        String n [];
+        ArrayList<String> al = new ArrayList<String>();
+        n = this.jtexto.getText().split("");
+        for (int i = 0; i < n.length; i++) {
+            al.add(n[i]);
+        }
+        this.jtexto.setText("");
+        for (String string : al) {
+            if (string.equals("+")) {
+                sumaCacluladora(al);
+            }else if(string.equals("*")){
+               //multiplicacionCacluladora(al);
+            }
+        }
         
-        n = Integer.parseInt(this.jtexto.getText());
         
 
     }//GEN-LAST:event_jresultadoActionPerformed
 
     private void jrestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrestaActionPerformed
-        this.jtexto.setText(this.jtexto.getText() +" - ");
+        this.jtexto.setText(this.jtexto.getText() +"-");
     }//GEN-LAST:event_jrestaActionPerformed
 
     private void jsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsumaActionPerformed
-        this.jtexto.setText(this.jtexto.getText() +" + ");
+        this.jtexto.setText(this.jtexto.getText() +"+");
     }//GEN-LAST:event_jsumaActionPerformed
 
     /**
@@ -318,4 +332,10 @@ public class Logueo extends javax.swing.JFrame {
     private javax.swing.JButton jsuma;
     private javax.swing.JTextArea jtexto;
     // End of variables declaration//GEN-END:variables
+
+    private void sumaCacluladora(ArrayList<String> al) {
+        int n;
+        
+        
+    }
 }
